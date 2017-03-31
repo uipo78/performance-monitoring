@@ -20,7 +20,9 @@ def data_array(data_loc='gpu-usage\\log1.txt'):
 			raw_values_list.remove('\n')
 			# For each value, removes excess whitespace and stores in a list
 			values_list = [' '.join(value.split()) for value in raw_values_list]
+			
 			for value, field in zip(values_list, fields_list):
+				# Converts a value's type according to the field to which it belongs
 				if field in ['Fan Speed (RPM) [RPM]', 'Memory Used [MB]', 'PerfCap Reason []']:
 					row[field] = int(value)
 				elif 'Date' == field:
