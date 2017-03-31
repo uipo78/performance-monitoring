@@ -1,10 +1,10 @@
 import datetime as dt
 
-def data_array(data_loc='gpu-usage\\log1.txt'):
+def data_array(data_loc):
 	data = []
 	with open(data_loc, 'r') as fp:
 		'''
-		Stores log1.txt as an array of dictionaries. Each dictionary
+		Stores data_loc file as an array of dictionaries. Each dictionary
 		corresponds to a row, and has keys corresponding to the dataset's fields 
 		'''
 
